@@ -19,9 +19,14 @@ $(document).ready(function(){
                 if (customer.valid==true){
                     $("#loginform").removeClass("fail");
                     $("#loginform").addClass("success");
+                    $("#postResultDiv").removeClass("hidemessage");
+                    $("#postResultDiv").addClass("showmessage");
+
                 }else{
                     $("#loginform").removeClass("success");
                     $("#loginform").addClass("fail");
+                    $("#postResultDiv").removeClass("showmessage");
+                    $("#postResultDiv").addClass("hidemessage");
                 }
                 $("#postResultDiv").html("<p>"+"Post Successfully! <br>"+"Email Address: "+ customer.email+"</br>"+"Password: "+customer.upwd+"</br>"+"Valid User: "+customer.valid+"</p>");
                 

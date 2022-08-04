@@ -30,6 +30,9 @@ app.post('/api/login',function(req,res){
     var customer={};
     customer.email=req.body.email;
     customer.upwd=req.body.upwd;
+    console.log(req.body.email);
+    console.log(req.body.upwd);
+
     if(req.body.email=="wonwoo@com.au"&& req.body.upwd=="991106"){
         customer.valid=true;
 

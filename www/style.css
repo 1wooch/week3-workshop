@@ -29,3 +29,9 @@ form input{
     padding: 1em;
     
 }
+.hidemessage{
+    display: none;
+}
+.showmessage{
+    display: block;
+}
