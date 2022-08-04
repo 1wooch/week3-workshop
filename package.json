@@ -1,0 +1,23 @@
+{
+  "name": "workshop3",
+  "version": "1.0.0",
+  "description": "3813 week3 workshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1wooch/week3-workshop.git"
+  },
+  "keywords": [
+    "workshop",
+    "3813"
+  ],
+  "author": "WONWOOCHOI",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1wooch/week3-workshop/issues"
+  },
+  "homepage": "https://github.com/1wooch/week3-workshop#readme"
+}
