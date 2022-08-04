@@ -1,4 +1,5 @@
 var express=require('express'); //used for routing
+const path = require('path');
 var app=express();
 var http=require('http').Server(app);
 app.use(express.static(__dirname+'/www'));
@@ -14,3 +15,4 @@ let server=http.listen(3000,function(){
 app.get('/test',function(req,res){
     res.sendFile(__dirname+'/www/test.html');
 });
+require('./routes/homeroute.js').route(app,path);
