@@ -24,7 +24,7 @@ app.get('/',function(req,res){
 });
 
 app.post('/api/login',function(req,res){
-    if (!re.body){
+    if (!req.body){
         return res.sendStatus(400)
     }
     var customer={};

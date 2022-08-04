@@ -1,4 +1,4 @@
-$(document).redraw(function(){
+$(document).ready(function(){
     $("#loginform").submit(function(event){
         event.preventDefault();
         ajaxPost();
