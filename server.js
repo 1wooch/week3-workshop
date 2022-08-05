@@ -19,6 +19,13 @@ app.listen(3000,'127.0.0.1',function(){
 
 
 
+const UserList=require("./www/data.json");
+//console.log(UserList);//length 3
+
+
+
+
+
 app.get('/',function(req,res){
     res.sendFile(__dirname+"/www/form.html");
 });
@@ -32,13 +39,34 @@ app.post('/api/login',function(req,res){
     customer.upwd=req.body.upwd;
     console.log(req.body.email);
     console.log(req.body.upwd);
+    for(let i=0; i<UserList.length; i++){
+        //console.log(UserList[i]["email"]);
+        if(req.body.email==UserList[i]["email"]){
+            console.log(UserList[i]["email"]);
+            console.log(UserList[i]["password"]);
 
-    if(req.body.email=="wonwoo@com.au"&& req.body.upwd=="991106"){
-        customer.valid=true;
+            if(req.body.upwd==UserList[i]["password"]){
+                console.log(UserList[i]["email"]+"1");
+                console.log(UserList[i]["password"]+"1");
+                customer.valid=true;
+                break;
+            }else{
+                console.log("pass")
+                customer.valid=false;
+            }
+        }else{
+            console.log("pass2")
 
-    }else{
-        customer.valid=false;
+            customer.valid=false;
+
+        }
     }
+    // if(req.body.email=="wonwoo@com.au" && req.body.upwd=="991106"){
+    //     customer.valid=true;
+
+    // }else{
+    //     customer.valid=false;
+    // }
     res.send(customer);
 });
 
